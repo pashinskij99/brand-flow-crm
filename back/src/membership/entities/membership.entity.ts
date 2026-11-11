@@ -36,7 +36,7 @@ export class Memberships {
   @Column({ enum: ROLE })
   role!: ROLE;
 
-  @Column({ enum: STATUS })
+  @Column({ enum: STATUS, default: STATUS.DISABLED })
   status!: STATUS;
 
   @ManyToOne(() => Users, (user) => user.memberships, { onDelete: 'CASCADE' })

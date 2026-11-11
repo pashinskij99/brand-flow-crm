@@ -28,7 +28,7 @@ export class Users {
   @Column({ unique: true })
   email!: string;
 
-  @Column()
+  @Column({ default: '1234567890' })
   password_hash!: string;
 
   @Column({ name: 'first_name' })
